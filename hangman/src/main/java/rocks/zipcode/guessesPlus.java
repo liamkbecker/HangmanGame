@@ -4,8 +4,8 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class guessesPlus {
-    char displayed[];
-    char word[];
+
+    String currentWord = "";
 
     String[] wordPool1 = {"ate", "hungry", "potato", "barrel", "water"};
 
@@ -14,7 +14,13 @@ public class guessesPlus {
         Random rand = new Random();
         int selector = rand.nextInt(5);
 
+        currentWord = wordPool1[selector];
+
         return wordPool1[selector];
+    }
+
+    public String getCurrentWord(){
+        return currentWord;
     }
 
 }
