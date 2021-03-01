@@ -9,14 +9,28 @@ public class Hangman {
         game.runGame();
     }
 
+    boolean wordGuessed = false;
+    int guesses = 0;
+
+    public int getGuesses(){
+        return guesses;
+    }
+
+    public boolean getWordGuessed(){
+        return wordGuessed;
+    }
+
     public void runGame(){
 
-        boolean wordGuessed = false;
-        int guesses = 0;
+        guessesPlus GP = new guessesPlus();
+        displayPlus DP = new displayPlus();
+
+        System.out.println(GP.getRandomWord());
+
 
         //choose a word, method in displayPlus
 
-        while(true){
+        /*while(true){
             wordGuessed = false;
             System.out.println("Welcome to Hazel's Hangman!");
             while(!wordGuessed){
@@ -37,7 +51,7 @@ public class Hangman {
                 }
             }
             //Do you want to play again? method in displayPlus
-        }
+        }*/
 
 
     }
