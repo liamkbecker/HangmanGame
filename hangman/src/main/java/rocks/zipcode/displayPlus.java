@@ -8,11 +8,29 @@ public class displayPlus {
     char[] wordArray;
 
     public char[] toCharArray(String input){
-        char[] returnCharArray = new char[input.length()];
+        char[] charArray = new char[input.length()];
         for(int i = 0; i < input.length(); i++){
-            returnCharArray[i] = input.charAt(i);
+            charArray[i] = input.charAt(i);
         }
-        return returnCharArray;
+        return charArray;
+    }
+
+    public char[] generateBlankArray(String input){
+        char[] charArray = new char[input.length()];
+        for(int i = 0; i < input.length(); i++){
+            charArray[i] = '_';
+        }
+        return charArray;
+    }
+
+    public String formatCharArray(char[] array){
+        String returnString = "";
+        returnString = returnString + array[0];
+        for(int i = 1; i < array.length; i++){
+            returnString = returnString + " ";
+            returnString = returnString + array[i];
+        }
+        return returnString;
     }
 
 }

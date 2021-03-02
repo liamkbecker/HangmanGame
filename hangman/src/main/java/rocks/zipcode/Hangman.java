@@ -25,10 +25,12 @@ public class Hangman {
         guessesPlus GP = new guessesPlus();
         displayPlus DP = new displayPlus();
 
-        System.out.println(GP.getRandomWord());
+        String testWord = GP.getRandomWord();
+        char[] hiddenArray = testWord.toCharArray();
+        char[] blankArray = DP.generateBlankArray(testWord);
 
-
-        //choose a word, method in displayPlus
+        //System.out.println(DP.formatCharArray(hiddenArray));
+        //System.out.println(DP.formatCharArray(blankArray));
 
         /*while(true){
             wordGuessed = false;
